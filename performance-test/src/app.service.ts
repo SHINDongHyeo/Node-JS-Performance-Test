@@ -6,7 +6,13 @@ export class AppService {
     return 'Hello World!';
   }
 
-  getTest(): string {
-    return '테스트용 api 입니다.';
+  getTest(): number {
+    function fibonacci(num: number): number {
+      if (num <= 1) return num;
+      return fibonacci(num - 1) + fibonacci(num - 2);
+    }
+
+    const result = fibonacci(35); // 예: 35번째 피보나치 수 계산
+    return result;
   }
 }
